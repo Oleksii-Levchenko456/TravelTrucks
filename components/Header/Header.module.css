@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  gap: 450px;
+  align-items: center;
+
+  color: #101828;
+
+  padding-left: 64px;
+  background-color: #f7f7f7;
+  height: 72px;
+
+  width: 1440px;
+  margin: 0 auto;
+}
+.spanTravel {
+  color: #101828;
+  font-weight: 800;
+}
+.spanTrucks {
+  color: #475467;
+  font-weight: 800;
+}
+.headerNavigator {
+  display: flex;
+  gap: 32px;
+}
+.active {
+  color: #d84343;
+}

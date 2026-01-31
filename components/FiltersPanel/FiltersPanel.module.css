@@ -1,0 +1,91 @@
+.filters {
+  display: flex;
+  flex-direction: column;
+}
+.inputLocation {
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 40px;
+  width: 360px;
+  height: 56px;
+
+  background-color: #f7f7f7;
+}
+.description {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #475467;
+}
+.headerFilter {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: #101828;
+  margin-top: 32px;
+}
+.hr {
+  margin: 24px 0 24px 0;
+}
+.icon {
+  height: 32px;
+  width: 32px;
+}
+.divTags {
+  display: flex;
+  flex-wrap: wrap;
+  width: 360px;
+  row-gap: 6px;
+  column-gap: 12px;
+}
+.filterTagButton {
+  display: flex;
+  flex-direction: column;
+
+  width: 112px;
+  height: 96px;
+
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #dadde1;
+  border-radius: 12px;
+
+  cursor: pointer;
+}
+.button {
+  display: block;
+  border-radius: 200px;
+  padding: 16px 60px;
+  width: 173px;
+  height: 56px;
+
+  background: #e44848;
+  color: #fff;
+}
+.active {
+  border: 2px solid #d32f2f;
+}
+.vehicleType {
+  display: flex;
+  gap: 12px;
+}
+.vehicleTypeButton {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 5px;
+
+  width: 112px;
+  height: 96px;
+
+  justify-content: center;
+  border: 1px solid #dadde1;
+  border-radius: 12px;
+
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.vehicleTypeButton.active {
+  border: 2px solid #d32f2f;
+}
