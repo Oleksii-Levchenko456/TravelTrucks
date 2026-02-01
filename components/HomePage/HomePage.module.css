@@ -1,5 +1,5 @@
 .hero {
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 72px);
   background-image: url('/HeroImage.jpg');
   background-size: cover;
   background-position: center;
@@ -34,6 +34,9 @@
 
   background: #e44848;
   color: #fff;
+}
+.button:hover {
+  background-color: #d84343;
 }
 .buttonHero {
   margin-top: 40px;

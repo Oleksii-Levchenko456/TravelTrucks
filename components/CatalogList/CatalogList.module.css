@@ -115,6 +115,9 @@
   letter-spacing: -0.01em;
   color: #fff;
 }
+.button:hover {
+  background-color: #d84343;
+}
 .buttonLoadMore {
   border: 1px solid #dadde1;
   border-radius: 200px;
@@ -123,4 +126,7 @@
   height: 56px;
 
   cursor: pointer;
+}
+.buttonLoadMore:hover {
+  border: 1px solid #d84343;
 }

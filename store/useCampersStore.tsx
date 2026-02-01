@@ -15,6 +15,9 @@ interface CampersStore {
 
   favorites: string[]
 
+  isLoading: boolean
+  error: string | null
+
   loadCampers: () => Promise<void>
   setFilter: <K extends keyof Filters>(key: K, value: Filters[K]) => void
   applyFilters: () => Promise<void>
@@ -33,6 +36,8 @@ export const useCampersStore = create<CampersStore>()(
       filters: {},
 
       favorites: [],
+      isLoading: false,
+      error: null,
 
       setFilter: (key, value) =>
         set((state) => ({
@@ -52,18 +57,26 @@ export const useCampersStore = create<CampersStore>()(
       loadCampers: async () => {
         const { page, limit, campers, filters } = get()
 
-        const response = await api.get('/campers', {
-          params: {
-            page,
-            limit,
-            ...filters,
-          },
-        })
+        set({ isLoading: true })
 
-        set({
-          campers: [...campers, ...response.data.items],
-          page: page + 1,
-        })
+        try {
+          const response = await api.get('/campers', {
+            params: {
+              page,
+              limit,
+              ...filters,
+            },
+          })
+
+          set({
+            campers: [...campers, ...response.data.items],
+            page: page + 1,
+          })
+        } catch {
+          set({ error: 'Error' })
+        } finally {
+          set({ isLoading: false })
+        }
       },
 
       applyFilters: async () => {

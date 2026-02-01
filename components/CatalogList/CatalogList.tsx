@@ -13,9 +13,12 @@ export function CatalogList() {
 
   const favorites = useCampersStore((state) => state.favorites)
   const toggleFavorite = useCampersStore((state) => state.toggleFavorite)
+  const isLoading = useCampersStore((state) => state.isLoading)
 
   const isFavorite = (id: string) => favorites.includes(id)
-
+  // if (isLoading) {
+  //   return <p>Loading...</p>
+  // }
   return (
     <div className={css.container}>
       {campers.map((camper) => {
@@ -93,10 +96,13 @@ export function CatalogList() {
           </div>
         )
       })}
-
-      <button onClick={loadCampers} className={css.buttonLoadMore}>
-        Load more
-      </button>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <button onClick={loadCampers} className={css.buttonLoadMore}>
+          Load more
+        </button>
+      )}
     </div>
   )
 }

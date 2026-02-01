@@ -6,6 +6,7 @@ import css from './PageCamper.module.css'
 import { Camper } from '@/types'
 import { FeatureKey, FEATURES_CONFIG } from '@/constants/featuresConfig'
 import toast, { Toaster } from 'react-hot-toast'
+import { CustomDatePicker } from '../CustomDatePicker/CustomDatePicker'
 
 type Props = {
   camper: Camper
@@ -13,6 +14,7 @@ type Props = {
 
 export function PageCamper({ camper }: Props) {
   const [activeTab, setActiveTab] = useState<'features' | 'reviews'>('features')
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined)
 
   const features = (Object.keys(FEATURES_CONFIG) as FeatureKey[]).filter(
     (key) => camper[key]
@@ -171,16 +173,18 @@ export function PageCamper({ camper }: Props) {
             Stay connected! We are always ready to help you.
           </p>
           <form className={css.form} onSubmit={submitHandler}>
-            <input className={css.input} placeholder="Name" required />
+            <input className={css.input} placeholder="Name*" required />
 
             <input
               className={css.input}
-              placeholder="Email"
+              placeholder="Email*"
               type="email"
               required
             />
-
-            <input className={css.input} type="date" required />
+            <CustomDatePicker
+              selectedDate={selectedDate}
+              setSelectedDate={setSelectedDate}
+            />
 
             <textarea className={css.textarea} placeholder="Comment" />
 

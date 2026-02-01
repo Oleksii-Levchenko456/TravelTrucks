@@ -1,0 +1,25 @@
+.customDatePicker {
+  position: relative;
+  height: 60px;
+  padding: 18px;
+
+  border-radius: 12px;
+  background: #f7f7f7;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.customDatePicker .rdp {
+  position: absolute;
+  top: 40px;
+  z-index: 10;
+  background: white !important;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.rdp_months {
+  background: white;
+}

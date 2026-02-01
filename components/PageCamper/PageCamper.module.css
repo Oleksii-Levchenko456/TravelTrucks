@@ -16,9 +16,12 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 133%;
-  color: var(--main);
 }
-
+.blockTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+}
 .title {
   font-size: 32px;
   font-weight: 600;
@@ -202,8 +205,8 @@
 .input,
 .textarea {
   border-radius: 10px;
-  padding: 10px 12px;
-  font-size: 14px;
+  padding: 18px;
+  font-size: 16px;
   outline: none;
   background: #f7f7f7;
   height: 60px;
@@ -218,6 +221,8 @@
   min-height: 90px;
   resize: vertical;
   height: 118px;
+  resize: none;
+  overflow: hidden;
 }
 
 .sendButton {
