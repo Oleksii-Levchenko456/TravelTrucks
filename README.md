@@ -1,6 +1,6 @@
 # Travel Trucks One (Beta)
 
-**Travel Trucks One** — modern web application to explore a catalog of campers and travel vehicles. Users can browse and find campers of their dreams, review listings, and prepare for their next adventure. :contentReference[oaicite:5]{index=5}
+**Travel Trucks One** — modern web application to explore a catalog of campers and travel vehicles. Users can browse and find campers of their dreams, review listings, and prepare for their next adventure. 
 
 ## Features
 - Home page with welcome screen and intro.
